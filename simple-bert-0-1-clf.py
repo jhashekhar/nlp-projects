@@ -53,6 +53,7 @@ class BERTModel(nn.Module):
         #self.softmax = nn.Softmax()
         self.sigmoid = nn.Sigmoid()
         self.relu = nn.ReLU()
+        
     def forward(self, inputs):
         _, out = self.model(inputs)
         out = self.dropout(self.relu(self.fc(out)))
